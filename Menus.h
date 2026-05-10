@@ -4,11 +4,13 @@
 class Menus
 {
 private:
-    static const int menuSize = 3;
+    static const int mainMenuSize = 3;
+    static const int inventoryMenuSize = 3;
+    static const int shopMenuSize = 3;
 
-    std::string mainMenu[menuSize];
-    std::string inventoryMenu[menuSize];
-    std::string shopMenu[menuSize];
+    std::string mainMenu[mainMenuSize];
+    std::string inventoryMenu[inventoryMenuSize];
+    std::string shopMenu[shopMenuSize];
 
 public:
     Menus();
@@ -16,4 +18,8 @@ public:
     std::string* GetMainMenu();
     std::string* GetInventoryMenu();
     std::string* GetShopMenu();
+
+    int GetMainMenuSize();
+    int GetInventoryMenuSize();
+    int GetShopMenuSize();
 };

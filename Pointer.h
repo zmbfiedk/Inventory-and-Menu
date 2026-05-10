@@ -10,5 +10,6 @@ public:
 
     void MoveUp();
     void MoveDown(int max);
+    void Reset();
     int GetPosition();
 };
