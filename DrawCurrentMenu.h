@@ -1,8 +1,8 @@
 #pragma once
+#include <string>
 
 class DrawCurrentMenu
 {
 public:
-    int DrawMenu();
-    int ChangeMenu();
+    void DrawMenu(std::string menu[], int size, int pointerPos);
 };

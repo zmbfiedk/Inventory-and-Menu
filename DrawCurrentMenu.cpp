@@ -1,9 +1,5 @@
 #include "DrawCurrentMenu.h"
 
-int DrawCurrentMenu::DrawMenu()
-{
-}
-
-int DrawCurrentMenu::ChangeMenu()
+void DrawCurrentMenu::DrawMenu(std::string menu[], int size, int pointerPos)
 {
 }

@@ -2,7 +2,13 @@
 
 class Pointer
 {
+private:
+    int position;
+
 public:
+    Pointer();
+
     void MoveUp();
-    void MoveDown();
+    void MoveDown(int max);
+    int GetPosition();
 };

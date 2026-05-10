@@ -4,6 +4,6 @@ void Pointer::MoveUp()
 {
 }
 
-void Pointer::MoveDown()
+void Pointer::MoveDown(int max)
 {
 }
