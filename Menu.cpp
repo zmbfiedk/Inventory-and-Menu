@@ -1,46 +1,40 @@
-#include "Menus.h"
+#include "Menu.h"
 
-Menus::Menus()
+Menu::Menu()
 {
-    mainMenu[0] = "Inventory";
-    mainMenu[1] = "Shop";
-    mainMenu[2] = "Exit";
-
-    inventoryMenu[0] = "Sword";
-    inventoryMenu[1] = "Potion";
-    inventoryMenu[2] = "Back";
-
-    shopMenu[0] = "Buy";
-    shopMenu[1] = "Sell";
-    shopMenu[2] = "Back";
+    title = "";
 }
 
-std::string* Menus::GetMainMenu()
+Menu::Menu(const std::string& menuTitle, const std::vector<std::string>& menuOptions)
 {
-    return mainMenu;
+    title = menuTitle;
+    options = menuOptions;
 }
 
-std::string* Menus::GetInventoryMenu()
+void Menu::SetTitle(const std::string& menuTitle)
 {
-    return inventoryMenu;
+    title = menuTitle;
 }
 
-std::string* Menus::GetShopMenu()
+void Menu::SetOptions(const std::vector<std::string>& menuOptions)
 {
-    return shopMenu;
+    options = menuOptions;
 }
 
-int Menus::GetMainMenuSize()
+std::string Menu::GetTitle()
 {
-    return mainMenuSize;
+    return title;
 }
 
-int Menus::GetInventoryMenuSize()
+std::string* Menu::GetOptions()
 {
-    return inventoryMenuSize;
+    if (options.empty())
+        return nullptr;
+
+    return options.data();
 }
 
-int Menus::GetShopMenuSize()
+int Menu::GetSize()
 {
-    return shopMenuSize;
+    return static_cast<int>(options.size());
 }

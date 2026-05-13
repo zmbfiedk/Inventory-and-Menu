@@ -1,19 +1,22 @@
 #pragma once
 #include <string>
+#include "Menu.h"
+#include "Item.h"
 
 class Menus
 {
 private:
-    static const int mainMenuSize = 3;
-    static const int inventoryMenuSize = 3;
-    static const int shopMenuSize = 3;
-
-    std::string mainMenu[mainMenuSize];
-    std::string inventoryMenu[inventoryMenuSize];
-    std::string shopMenu[shopMenuSize];
+    Menu mainMenu;
+    Menu inventoryMenu;
+    Menu shopMenu;
+    Item inventoryItems[3];
 
 public:
     Menus();
+
+    std::string GetMainMenuTitle();
+    std::string GetInventoryMenuTitle();
+    std::string GetShopMenuTitle();
 
     std::string* GetMainMenu();
     std::string* GetInventoryMenu();

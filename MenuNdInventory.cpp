@@ -27,7 +27,7 @@ int main()
         switch (currentMenu)
         {
         case MAIN:
-            std::cout << "Main Menu\n\n";
+            std::cout << menus.GetMainMenuTitle() << "\n\n";
             drawer.DrawMenu(
                 menus.GetMainMenu(),
                 menus.GetMainMenuSize(),
@@ -36,7 +36,7 @@ int main()
             break;
 
         case INVENTORY:
-            std::cout << "Inventory\n\n";
+            std::cout << menus.GetInventoryMenuTitle() << "\n\n";
             drawer.DrawMenu(
                 menus.GetInventoryMenu(),
                 menus.GetInventoryMenuSize(),
@@ -45,7 +45,7 @@ int main()
             break;
 
         case SHOP:
-            std::cout << "Shop\n\n";
+            std::cout << menus.GetShopMenuTitle() << "\n\n";
             drawer.DrawMenu(
                 menus.GetShopMenu(),
                 menus.GetShopMenuSize(),
@@ -107,7 +107,7 @@ int main()
                 break;
 
             case INVENTORY:
-                if (pointer.GetPosition() == 2)
+                if (pointer.GetPosition() == menus.GetInventoryMenuSize() - 1)
                 {
                     currentMenu = MAIN;
                     pointer.Reset();
@@ -115,7 +115,7 @@ int main()
                 break;
 
             case SHOP:
-                if (pointer.GetPosition() == 2)
+                if (pointer.GetPosition() == menus.GetShopMenuSize() - 1)
                 {
                     currentMenu = MAIN;
                     pointer.Reset();
