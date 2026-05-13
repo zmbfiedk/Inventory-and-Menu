@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\MenuNdInventory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:MenuNdInventory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\MenuNdInventory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MenuNdInventory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Pointer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:Pointer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Pointer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pointer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Pointer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:Pointer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\DrawCurrentMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:DrawCurrentMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Menus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\DrawCurrentMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:DrawCurrentMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\DrawCurrentMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawCurrentMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:Menus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\DrawCurrentMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawCurrentMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F89F5260-4516-4EEE-998B-D40F1C85AD9B}|MenuNdInventory.vcxproj|solutionrelative:Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Pointer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pointer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,25 +50,23 @@
               "RelativeToolTip": "Pointer.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-07T08:41:31.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T08:41:31.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Menu.cpp",
               "DocumentMoniker": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menu.cpp",
               "RelativeDocumentMoniker": "Menu.cpp",
               "ToolTip": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menu.cpp",
               "RelativeToolTip": "Menu.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-07T08:41:47.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T08:41:47.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Menus.h",
               "DocumentMoniker": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Menus.h",
               "RelativeDocumentMoniker": "Menus.h",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "Menus.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-07T08:41:16.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T08:41:16.414Z"
             },
             {
               "$type": "Document",
@@ -89,12 +86,11 @@
               "RelativeToolTip": "DrawCurrentMenu.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-07T08:41:01.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T08:41:01.281Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DrawCurrentMenu.cpp",
               "DocumentMoniker": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\DrawCurrentMenu.cpp",
               "RelativeDocumentMoniker": "DrawCurrentMenu.cpp",
@@ -102,12 +98,11 @@
               "RelativeToolTip": "DrawCurrentMenu.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-07T08:38:42.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T08:38:42.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Pointer.h",
               "DocumentMoniker": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\Pointer.h",
               "RelativeDocumentMoniker": "Pointer.h",
@@ -115,8 +110,7 @@
               "RelativeToolTip": "Pointer.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-07T08:38:09.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T08:38:09.039Z"
             },
             {
               "$type": "Document",
@@ -126,7 +120,7 @@
               "RelativeDocumentMoniker": "MenuNdInventory.cpp",
               "ToolTip": "C:\\Users\\arthu\\source\\repos\\MenuNdInventory\\MenuNdInventory.cpp",
               "RelativeToolTip": "MenuNdInventory.cpp",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAQwG4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-07T08:11:23.106Z",
               "EditorCaption": ""
