@@ -1,21 +1,46 @@
 #include "Item.h"
 
 Item::Item()
+    : name("Unknown"), description(""), type(ItemType::Trinket),
+    damage(0), heal(0), defense(0), baseValue(0)
 {
-    name = "";
 }
 
-Item::Item(const std::string& itemName)
+Item::Item(const std::string& name, const std::string& description, ItemType type,
+    int damage, int heal, int defense, int baseValue)
+    : name(name), description(description), type(type),
+    damage(damage), heal(heal), defense(defense), baseValue(baseValue)
 {
-    name = itemName;
 }
 
-void Item::SetName(const std::string& itemName)
+const std::string& Item::GetName() const { return name; }
+const std::string& Item::GetDescription() const { return description; }
+ItemType Item::GetType() const { return type; }
+int Item::GetDamage() const { return damage; }
+int Item::GetHeal() const { return heal; }
+int Item::GetDefense() const { return defense; }
+int Item::GetBaseValue() const { return baseValue; }
+
+std::string Item::GetTypeName() const
 {
-    name = itemName;
+    switch (type)
+    {
+    case ItemType::Weapon:  return "Weapon";
+    case ItemType::Potion:  return "Potion";
+    case ItemType::Armor:   return "Armor";
+    case ItemType::Trinket: return "Trinket";
+    default:                return "Unknown";
+    }
 }
 
-std::string Item::GetName()
+std::string Item::GetStatsText() const
 {
-    return name;
+    switch (type)
+    {
+    case ItemType::Weapon:  return "Damage: " + std::to_string(damage);
+    case ItemType::Potion:  return "Heal: " + std::to_string(heal);
+    case ItemType::Armor:   return "Defense: " + std::to_string(defense);
+    case ItemType::Trinket: return "No combat stats";
+    default:                return "";
+    }
 }
