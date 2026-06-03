@@ -127,19 +127,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="DrawCurrentMenu.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="ItemFactory.cpp" />
+    <ClCompile Include="ItemType.cpp" />
     <ClCompile Include="MenuNdInventory.cpp" />
+    <ClCompile Include="MenuRenderer.cpp" />
     <ClCompile Include="Pointer.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Menus.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="Wallet.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cursor.h" />
     <ClInclude Include="DrawCurrentMenu.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="ItemFactory.h" />
+    <ClInclude Include="ItemType.h" />
+    <ClInclude Include="MenuRenderer.h" />
     <ClInclude Include="Menus.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Pointer.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Shop.h" />
+    <ClInclude Include="Wallet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

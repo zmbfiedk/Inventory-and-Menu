@@ -1,8 +1,5 @@
-﻿  DrawCurrentMenu.cpp
-  MenuNdInventory.cpp
-  Pointer.cpp
-  Menu.cpp
-  Menus.cpp
+﻿  Menus.cpp
   Item.cpp
+  Wallet.cpp
   Generating Code...
   MenuNdInventory.vcxproj -> C:\Users\arthu\source\repos\MenuNdInventory\x64\Debug\MenuNdInventory.exe
