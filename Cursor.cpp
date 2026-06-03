@@ -1,14 +1,17 @@
 #include "Cursor.h"
 
-Cursor::Cursor() : position(0) {}
+Cursor::Cursor()
+{
+    position = 0;
+}
 
-void Cursor::Up()
+void Cursor::MoveUp()
 {
     if (position > 0)
         position--;
 }
 
-void Cursor::Down(int max)
+void Cursor::MoveDown(int max)
 {
     if (position < max - 1)
         position++;
@@ -21,12 +24,8 @@ void Cursor::Reset()
 
 void Cursor::Clamp(int max)
 {
-    if (max <= 0)
-        position = 0;
-    else if (position >= max)
+    if (position >= max)
         position = max - 1;
-    else if (position < 0)
-        position = 0;
 }
 
 int Cursor::GetPosition() const

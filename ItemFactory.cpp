@@ -1,7 +1,7 @@
 #include "ItemFactory.h"
 #include <random>
 
-static int RandInt(int min, int max)
+static int RandomInt(int min, int max)
 {
     static std::mt19937 rng{ std::random_device{}() };
     std::uniform_int_distribution<int> dist(min, max);
@@ -10,66 +10,115 @@ static int RandInt(int min, int max)
 
 static std::string Pick(const std::string* arr, int count)
 {
-    return arr[RandInt(0, count - 1)];
+    return arr[RandomInt(0, count - 1)];
 }
 
 Item ItemFactory::CreateRandomItem()
 {
-    int roll = RandInt(0, 3);
+    int type = RandomInt(0, 3);
 
-    if (roll == 0)
+    if (type == 0)
     {
-        const std::string names[] = { "Iron Sword", "Axe", "Dagger", "Blade" };
-        std::string name = Pick(names, 4);
-        int dmg = RandInt(5, 20);
-        int value = RandInt(25, 70);
+        const std::string names[] =
+        {
+            "Iron Sword", "Steel Blade", "Hunter Axe", "Bandit Knife",
+            "Knight Broadsword", "War Cleaver", "Arena Spear", "Rusted Saber"
+        };
+
+        const std::string desc[] =
+        {
+            "A reliable melee weapon.",
+            "Forged for battle.",
+            "Deadly at close range.",
+            "Simple, but effective."
+        };
 
         return Item(
-            name,
-            "A weapon used to deal damage.",
+            Pick(names, 8),
+            Pick(desc, 4),
             ItemType::Weapon,
-            dmg, 0, 0, value
+            RandomInt(5, 20),
+            0,
+            0,
+            RandomInt(25, 70)
         );
     }
 
-    if (roll == 1)
+    if (type == 1)
     {
-        const std::string names[] = { "Healing Potion", "Mana Potion", "Regen Potion", "Stamina Potion" };
-        std::string name = Pick(names, 4);
-        int heal = RandInt(10, 35);
-        int value = RandInt(10, 40);
+        const std::string names[] =
+        {
+            "Healing Potion", "Stamina Potion", "Mana Potion", "Regen Potion",
+            "Antidote Potion", "Adrenaline Flask", "Recovery Tonic", "Vital Elixir"
+        };
+
+        const std::string desc[] =
+        {
+            "Restores a bit of health.",
+            "A quick consumable with a useful effect.",
+            "Brewed for survival.",
+            "Best used in emergencies."
+        };
 
         return Item(
-            name,
-            "A consumable item with a useful effect.",
+            Pick(names, 8),
+            Pick(desc, 4),
             ItemType::Potion,
-            0, heal, 0, value
+            0,
+            RandomInt(10, 35),
+            0,
+            RandomInt(10, 40)
         );
     }
 
-    if (roll == 2)
+    if (type == 2)
     {
-        const std::string names[] = { "Leather Armor", "Iron Armor", "Knight Plate", "Guard Vest" };
-        std::string name = Pick(names, 4);
-        int def = RandInt(2, 15);
-        int value = RandInt(20, 60);
+        const std::string names[] =
+        {
+            "Leather Armor", "Iron Armor", "Guard Vest", "Knight Plate",
+            "Chain Mail", "Hunter Cloak", "Steel Chestplate", "Reinforced Pads"
+        };
+
+        const std::string desc[] =
+        {
+            "Protects the wearer from attacks.",
+            "Basic defense gear.",
+            "Heavy but sturdy.",
+            "Reliable protection for combat."
+        };
 
         return Item(
-            name,
-            "Protective gear that reduces damage.",
+            Pick(names, 8),
+            Pick(desc, 4),
             ItemType::Armor,
-            0, 0, def, value
+            0,
+            0,
+            RandomInt(2, 15),
+            RandomInt(20, 60)
         );
     }
 
-    const std::string names[] = { "Lucky Coin", "Gem Fragment", "Ancient Relic", "Odd Charm" };
-    std::string name = Pick(names, 4);
-    int value = RandInt(5, 25);
+    const std::string names[] =
+    {
+        "Golden Ring", "Ancient Coin", "Gem Fragment", "Lucky Charm",
+        "Old Relic", "Silver Idol", "Strange Talisman", "Merchant Token"
+    };
+
+    const std::string desc[] =
+    {
+        "Merchants still value it.",
+        "A strange collectible item.",
+        "Not useful in combat, but worth gold.",
+        "Looks rare."
+    };
 
     return Item(
-        name,
-        "A strange object merchants still buy.",
+        Pick(names, 8),
+        Pick(desc, 4),
         ItemType::Trinket,
-        0, 0, 0, value
+        0,
+        0,
+        0,
+        RandomInt(5, 30)
     );
 }

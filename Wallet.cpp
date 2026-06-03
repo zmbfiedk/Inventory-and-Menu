@@ -1,8 +1,8 @@
 #include "Wallet.h"
 
 Wallet::Wallet(int startingGold)
-    : gold(startingGold)
 {
+    gold = startingGold;
 }
 
 int Wallet::GetGold() const
@@ -12,15 +12,15 @@ int Wallet::GetGold() const
 
 void Wallet::AddGold(int amount)
 {
-    if (amount > 0)
-        gold += amount;
+    gold += amount;
 }
 
 bool Wallet::SpendGold(int amount)
 {
-    if (amount <= 0 || gold < amount)
+    if (gold < amount)
         return false;
 
     gold -= amount;
+
     return true;
 }

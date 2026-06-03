@@ -8,9 +8,12 @@ private:
 public:
     Cursor();
 
-    void Up();
-    void Down(int max);
+    void MoveUp();
+
+    void MoveDown(int max);
+
     void Reset();
+
     void Clamp(int max);
 
     int GetPosition() const;

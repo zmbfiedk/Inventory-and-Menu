@@ -3,6 +3,7 @@
 #include "Item.h"
 #include "Inventory.h"
 #include "Wallet.h"
+#include "TransactionResult.h"
 
 class Shop
 {
@@ -13,9 +14,10 @@ public:
     Shop();
 
     const std::vector<Item>& GetStock() const;
+
     int GetBuyPrice(const Item& item) const;
     int GetSellPrice(const Item& item) const;
 
-    bool BuyItem(int index, Inventory& playerInventory, Wallet& wallet);
-    bool SellItem(int index, Inventory& playerInventory, Wallet& wallet);
+    TransactionResult BuyItem(int index, Inventory& inventory, Wallet& wallet);
+    bool SellItem(int index, Inventory& inventory, Wallet& wallet);
 };

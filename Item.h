@@ -7,26 +7,34 @@ class Item
 private:
     std::string name;
     std::string description;
+
     ItemType type;
+
     int damage;
     int heal;
     int defense;
+
     int baseValue;
 
 public:
     Item();
-    Item(const std::string& name, const std::string& description, ItemType type,
-        int damage, int heal, int defense, int baseValue);
 
-    const std::string& GetName() const;
-    const std::string& GetDescription() const;
-    ItemType GetType() const;
-    std::string GetTypeName() const;
+    Item(
+        const std::string& name,
+        const std::string& description,
+        ItemType type,
+        int damage,
+        int heal,
+        int defense,
+        int baseValue
+    );
 
-    int GetDamage() const;
-    int GetHeal() const;
-    int GetDefense() const;
-    int GetBaseValue() const;
-
+    std::string GetName() const;
+    std::string GetDescription() const;
     std::string GetStatsText() const;
+    std::string GetTypeText() const;
+
+    ItemType GetType() const;
+
+    int GetBaseValue() const;
 };

@@ -9,11 +9,14 @@ private:
 
 public:
     void AddItem(const Item& item);
-    bool RemoveItem(int index);
-    const Item* GetItem(int index) const;
+
+    void RemoveItem(int index);
 
     int GetSize() const;
-    int GetTotalSellValue() const;
 
     const std::vector<Item>& GetItems() const;
+
+    const Item* GetItem(int index) const;
+
+    int GetTotalSellValue() const;
 };

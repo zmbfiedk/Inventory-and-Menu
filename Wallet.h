@@ -6,9 +6,11 @@ private:
     int gold;
 
 public:
-    Wallet(int startingGold = 0);
+    Wallet(int startingGold);
 
     int GetGold() const;
+
     void AddGold(int amount);
+
     bool SpendGold(int amount);
 };

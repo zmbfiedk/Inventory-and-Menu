@@ -1,62 +1,89 @@
 #include <iostream>
 #include <conio.h>
+
 #include "Cursor.h"
-#include "MenuRenderer.h"
 #include "Inventory.h"
+#include "MenuRenderer.h"
 #include "Shop.h"
 #include "Wallet.h"
+#include "World.h"
+#include "TransactionResult.h"
 
 enum class MenuState
 {
     Main,
     Inventory,
-    Shop
+    Shop,
+    WorldItems
 };
 
 int main()
 {
     Wallet wallet(100);
-    Inventory playerInventory;
+    Inventory inventory;
     Shop shop;
-    MenuRenderer renderer;
+    World world;
     Cursor cursor;
+    MenuRenderer renderer;
 
-    const std::string mainMenu[] = { "Inventory", "Shop", "Exit" };
-    MenuState state = MenuState::Main;
     bool running = true;
+    MenuState state = MenuState::Main;
+
+    std::string statusMessage;
+
+    const std::string mainMenu[] =
+    {
+        "Inventory",
+        "Shop",
+        "Scene Items",
+        "Exit"
+    };
 
     while (running)
     {
         system("cls");
 
-        if (state == MenuState::Main)
+        switch (state)
         {
-            renderer.DrawMainMenu(mainMenu, 3, cursor.GetPosition(), wallet.GetGold());
-        }
-        else if (state == MenuState::Inventory)
-        {
+        case MenuState::Main:
+            renderer.DrawMainMenu(mainMenu, 4, cursor.GetPosition(), wallet.GetGold());
+            break;
+
+        case MenuState::Inventory:
             renderer.DrawItemMenu(
-                "Inventory",
-                playerInventory.GetItems(),
+                "INVENTORY",
+                inventory.GetItems(),
                 cursor.GetPosition(),
-                wallet.GetGold(),
                 false,
-                playerInventory.GetSize(),
-                playerInventory.GetTotalSellValue()
+                wallet.GetGold(),
+                statusMessage
             );
-        }
-        else if (state == MenuState::Shop)
-        {
+            break;
+
+        case MenuState::Shop:
             renderer.DrawItemMenu(
-                "Shop",
+                "SHOP",
                 shop.GetStock(),
                 cursor.GetPosition(),
-                wallet.GetGold(),
                 true,
-                (int)shop.GetStock().size(),
-                0
+                wallet.GetGold(),
+                statusMessage
             );
+            break;
+
+        case MenuState::WorldItems:
+            renderer.DrawItemMenu(
+                "SCENE ITEMS",
+                world.GetSceneItems(),
+                cursor.GetPosition(),
+                false,
+                wallet.GetGold(),
+                statusMessage
+            );
+            break;
         }
+
+        statusMessage.clear();
 
         int key = _getch();
 
@@ -65,21 +92,35 @@ int main()
             key = _getch();
 
             if (key == 72)
-                cursor.Up();
-            else if (key == 80)
+                cursor.MoveUp();
+
+            if (key == 80)
             {
-                if (state == MenuState::Main)
-                    cursor.Down(3);
-                else if (state == MenuState::Inventory)
-                    cursor.Down(playerInventory.GetSize() + 1);
-                else if (state == MenuState::Shop)
-                    cursor.Down((int)shop.GetStock().size() + 1);
+                switch (state)
+                {
+                case MenuState::Main:
+                    cursor.MoveDown(4);
+                    break;
+
+                case MenuState::Inventory:
+                    cursor.MoveDown(inventory.GetSize() + 1);
+                    break;
+
+                case MenuState::Shop:
+                    cursor.MoveDown((int)shop.GetStock().size() + 1);
+                    break;
+
+                case MenuState::WorldItems:
+                    cursor.MoveDown((int)world.GetSceneItems().size() + 1);
+                    break;
+                }
             }
         }
         else if (key == 13)
         {
-            if (state == MenuState::Main)
+            switch (state)
             {
+            case MenuState::Main:
                 if (cursor.GetPosition() == 0)
                 {
                     state = MenuState::Inventory;
@@ -92,28 +133,30 @@ int main()
                 }
                 else if (cursor.GetPosition() == 2)
                 {
+                    state = MenuState::WorldItems;
+                    cursor.Reset();
+                }
+                else if (cursor.GetPosition() == 3)
+                {
                     running = false;
                 }
-            }
-            else if (state == MenuState::Inventory)
-            {
-                if (cursor.GetPosition() == playerInventory.GetSize())
+                break;
+
+            case MenuState::Inventory:
+                if (cursor.GetPosition() == inventory.GetSize())
                 {
                     state = MenuState::Main;
                     cursor.Reset();
                 }
-                else
+                else if (inventory.GetSize() > 0)
                 {
-                    playerInventory.GetItem(cursor.GetPosition());
-                    if (playerInventory.GetSize() > 0)
-                    {
-                        shop.SellItem(cursor.GetPosition(), playerInventory, wallet);
-                        cursor.Clamp(playerInventory.GetSize() + 1);
-                    }
+                    if (shop.SellItem(cursor.GetPosition(), inventory, wallet))
+                        statusMessage = "Item sold.";
+                    cursor.Clamp(inventory.GetSize() + 1);
                 }
-            }
-            else if (state == MenuState::Shop)
-            {
+                break;
+
+            case MenuState::Shop:
                 if (cursor.GetPosition() == (int)shop.GetStock().size())
                 {
                     state = MenuState::Main;
@@ -121,10 +164,44 @@ int main()
                 }
                 else
                 {
-                    shop.BuyItem(cursor.GetPosition(), playerInventory, wallet);
-                    cursor.Clamp((int)shop.GetStock().size() + 1);
+                    TransactionResult result = shop.BuyItem(cursor.GetPosition(), inventory, wallet);
+
+                    if (result == TransactionResult::Success)
+                    {
+                        statusMessage = "Item bought.";
+                        cursor.Clamp((int)shop.GetStock().size() + 1);
+                    }
+                    else if (result == TransactionResult::NotEnoughGold)
+                    {
+                        statusMessage = "You don't have enough money.";
+                    }
+                    else
+                    {
+                        statusMessage = "That item is unavailable.";
+                    }
                 }
+                break;
+
+            case MenuState::WorldItems:
+                if (cursor.GetPosition() == (int)world.GetSceneItems().size())
+                {
+                    state = MenuState::Main;
+                    cursor.Reset();
+                }
+                else
+                {
+                    if (world.PickupItem(cursor.GetPosition(), inventory))
+                        statusMessage = "Item picked up.";
+
+                    cursor.Clamp((int)world.GetSceneItems().size() + 1);
+                }
+                break;
             }
+        }
+        else if (key == 8)
+        {
+            state = MenuState::Main;
+            cursor.Reset();
         }
     }
 

@@ -1,5 +1,7 @@
-﻿  Menus.cpp
-  Item.cpp
-  Wallet.cpp
+﻿  ItemFactory.cpp
+  MenuNdInventory.cpp
+  MenuRenderer.cpp
+  Shop.cpp
+  World.cpp
   Generating Code...
   MenuNdInventory.vcxproj -> C:\Users\arthu\source\repos\MenuNdInventory\x64\Debug\MenuNdInventory.exe
